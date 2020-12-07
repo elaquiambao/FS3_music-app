@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Music Website </title>
+<link href="musicStyle.css" rel="stylesheet" />
+</head>
+<body>
+<div id="mainContainer">
+    <div id="musicSite">Music <span>Search</span>
+    </div>            
+    <div id="searchBar"> 
+        <form>
+            <label for="searchArtist">Artist:</label>
+            <input id="searchArtist" 
+                type="text" 
+                placeholder="Enter the Artist Name">
+            <br>
+            <label for="searchSong">Song:</label>
+            <input id="searchSong" 
+                type="text" 
+                placeholder="Enter the Song Title">
+            <br>
+            <label for="searchAlbum">Album:</label>
+            <input id="searchAlbum" 
+                type="text" 
+                placeholder="Enter the Album Name">
+            <br>
+            <label for="searchGenre">Genre:</label>
+            <select id="searchGenre">
+                <option value="">Select a Genre</option>
+                <option value="Pop">Pop</option>
+                <option value="Hip-Hop">Hip-hop</option>
+                <option value="Country">Country</option>
+            </select>  
+            <button id="searchButton">Search</button>
+            <button id="resetButton">Reset</button>
+        </form>
+    </div>
+    <div id="trendingContent">        
+        <!-- <h1>Trending Songs</h1>                -->
+    </div> 
+    <!-- Table -->
+    <div id="songList"> 
+        <table>
+            <thead>
+                <th>Artist</th>
+                <th>Song</th>
+                <th>Time</th>
+                <th>Album</th>
+                <th>Rating</th>
+                <th>Genre</th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>                    
+            </tbody>
+        </table>  
+    </div>
+    <!-- end of Table -->
+    <div id="musicpage-footer">
+        Copyright © <a href="#"><strong>MusicLovers</strong></a> 
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script>
+    const socket = io('ws://localhost:8080');
+    socket.on('connect', () => {
+        console.log('SOCKET - connected');
+    })
+    socket.on('disconnect', () => {
+        console.log('SOCKET - disconnected');
+    })
+    socket.on('download-received', (songId) => {
+        console.log('SOCKET - download received from server with id:'+ songId);
+    })
+</script>
+<script src="setupFunctions.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

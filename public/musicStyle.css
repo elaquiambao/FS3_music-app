@@ -1,0 +1,229 @@
+body {
+	margin:0;
+	padding:0;
+	line-height: 1.5em;
+	font-family:  Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	background: url(images/music5.jpg) repeat;
+	position: relative;
+    animation: change 9s infinite;
+}
+
+/*------animation for background----------*/
+@keyframes change {
+	0%   {
+		/*background-color: tomato;*/
+		background: url(images/music2.jpg) repeat;
+	}
+	25%  {
+		/*background-color: #cccc66;	*/
+		background: url(images/music3.jpg) repeat;
+	}
+	50%  {
+	    /*background-color: #ffc601; */
+		background: url(images/music5.jpg) repeat;
+	}
+	100% {
+		/*background-color: orchid;*/	
+		background: url(images/music4.jpg) repeat;
+	}
+  }
+
+#mainContainer {
+	margin: 0px auto;
+	width: 970px;
+	background: url(images/main_background.gif) repeat-y;
+}
+#musicSite {
+	padding: 30px 0 10px 30px;
+	font-size: 4.0em;
+	font-weight: bold;
+	color: #FF9933;
+}
+#musicSite span{
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+button {
+	cursor: pointer;
+	background-color: lightgrey;
+}
+
+/*------------Search Form------------*/
+form {
+	margin: 0;
+	padding: 0;
+	text-align: right;	
+}
+#searchBar {
+    margin-top: 20px;
+	margin-left: auto;
+	margin-bottom: auto;
+	margin-right: auto;
+	width: 50%;
+    border: 3px solid orange;
+    padding: 20px 10% 10px 10%;
+}
+#searchBar label {
+    text-align: right;
+    width: 60px;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 15px;
+	color: white;
+}
+#searchBar input, #searchBar select {
+    width: 80%;
+    display: inline-block;
+	box-sizing: border-box;
+	background: white;
+	height: 25px;
+	padding: 2px 2px 2px 2px;
+	margin: 2px 2px 2px 2px;
+}
+#searchBar button {
+    width: 100px;
+    background-color: orange;
+	font-weight: bold;
+	height: 25px;
+}
+
+/*------------Trending Songs------------*/
+
+#trendingContent {
+	padding: 20px 0 20px 0;
+	width: 950px;
+	margin: 25px auto 25px auto;
+
+	display: flex;
+    overflow-x: auto;
+}
+
+.trendingBox {
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.trendingBox > img {
+	width: 150px;
+}
+
+#trendingContent h1 {
+	margin: 0 0 25px 0;
+	padding: 10px 0 10px 15px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #ffc601;
+	background: #000000;
+	border-bottom: 1px solid #b4a08a;
+}
+
+.trendingBox h3 {
+	margin: 0 0 5px 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffc601;	
+}
+
+.trendingBox h4 {
+	margin: 0 0 5px 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 12px;
+	color: #999999;	
+	display: block;
+}
+
+.rantsection {
+	height: 13px;
+	margin-bottom: 10px;
+}
+.rantsection img {
+	float: left;
+	height: 13px;
+	width: 13px;
+	border: 0px;
+	margin-right: 5px;
+}
+
+.moreButton a {
+	clear: both;
+	text-align: center;
+	display: block;
+	width: 60px;
+	padding: 1px 0;
+	margin-bottom: 5px; 
+	background: #6c5b4c;
+	border-bottom: 1px solid #a59180;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/*-----------------Table---------------------*/
+#songList {
+	margin: auto;
+	margin-bottom: 50px;
+    width: 90%;
+}
+
+#songList table {
+	width: 100%;
+	border-collapse: collapse;
+	
+}
+
+/* #songList tr {
+	display: none;
+} */
+
+#songList tr:nth-child(even){
+    background-color:rgb(146, 70, 42);
+}
+
+#songList tr:nth-child(odd){
+	background-color:rgb(32, 13, 13);
+}
+
+#songList tr:hover {
+    background-color: orange;
+}
+
+#songList th, #songList td {
+    text-align: center;
+    padding: 5px 0 5px 10px;
+	border-bottom: 1px solid orange;
+}
+
+#songList th {
+	background: #050200;
+	color: orange;
+	font-size: 15px;
+}
+
+#songList td {
+	color: white;
+	font-weight: bold;
+}
+
+/*------------Footer------------*/
+#musicpage-footer {
+	clear: both;
+	padding: 15px 0;
+	width: 950px;
+	margin: 0 10px;
+	text-align: center;
+	color: #000000;
+	background: #6c5b4c;
+	text-align: center;
+}
+
+#musicpage-footer a{
+	color: #000000;
+}
+
+#musicpage-footer a:hover{
+	color: #cccc66;
+}
